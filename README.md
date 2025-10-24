@@ -126,20 +126,6 @@ curl -X POST /api/content/access \
 }
 ```
 
-**Framework Integration:**
-
-```php
-// Symfony Controller Example:
-class ApiController {
-    #[Route('/api/content/access', methods: ['POST'])]
-    public function checkAccess(Request $request): JsonResponse {
-        $data = json_decode($request->getContent(), true);
-        $result = $this->contentAccessController->checkAccess($data);
-        return new JsonResponse($result);
-    }
-}
-```
-
 **Testing:**
 
 ````bash
